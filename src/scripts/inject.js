@@ -1170,7 +1170,7 @@
   }
 
   function blockShorts(data) {
-    if (location.host !== "www.youtube.com") return;
+    if (location.host !== 'www.youtube.com') return;
 
     const handleRedirect = url => {
       const path = new URL(url, location.origin).pathname;
@@ -1195,7 +1195,7 @@
     handleRedirect(location.href);
 
     // Redirect single-page application (SPA) transitions (for example, launching Shorts through a playlist, or some ways of forming URLs)
-    document.addEventListener("yt-navigate-start", e => handleRedirect(e?.detail?.url), true);
+    document.addEventListener('yt-navigate-start', e => handleRedirect(e?.detail?.url), true);
 
     data.filterData.channelId.push(/^TAB_SHORTS$/);
     data.filterData.channelId.push(/^TAB_SHORTS_CAIRO$/);
