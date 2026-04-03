@@ -1182,7 +1182,7 @@
       }
 
       // Redirect Shorts menu URL of channels to channel home: channel URL (ID-based), handle URL, custom URL, legacy username URL (and its direct form; for example, https://www.youtube.com/YouTube/shorts)
-		  // Also affects primary hashtag page for Shorts videos (for example, https://www.youtube.com/hashtag/shorts), which will cause it to redirect to Home menu
+	  // Also affects primary hashtag page for Shorts videos (for example, https://www.youtube.com/hashtag/shorts), which will cause it to redirect to Home menu
       if (/^\/(?:[^/]+\/)?[^/]+\/shorts\/?$/.test(path)) {
         location.replace(path.replace(/\/shorts\/?$/, ''));
         return true;
